@@ -6,12 +6,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-static Display* display = {0};
-static Window window = {0};
-static XEvent event = {0};
-static int screen = 0;
+static Display*   display   =  {0};
+static Window     window    =  {0};
+static XEvent     event     =  {0};
+static int        screen    =   0;
 
-CWL_window* CWL_Create_Window(int width, int height, const char* title, unsigned int flags)
+CWL_window*
+CWL_Create_Window(int width, int height, const char* title, unsigned int flags)
 {
     CWL_window* cwl_window = malloc(sizeof(*cwl_window));
     cwl_window->width = width;
@@ -36,13 +37,15 @@ CWL_window* CWL_Create_Window(int width, int height, const char* title, unsigned
     return cwl_window;
 }
 
-void CWL_Release_Window(CWL_window* cwl_window)
+void
+CWL_Release_Window(CWL_window* cwl_window)
 {
     XCloseDisplay(display);
     free(cwl_window);
 }
 
-void CWL_Poll_Events()
+void
+CWL_Poll_Events()
 {
     XNextEvent(display, &event);
 }

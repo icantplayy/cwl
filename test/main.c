@@ -1,8 +1,9 @@
 #include <CWL/cwl.h>
 
-int main(void)
+int
+main(int argc, char **argv)
 {
-    CWL_window* window = CWL_Create_Window(800, 600, "Test", 0);
+    CWL_window* window = CWL_Create_Window(1280, 720, "Test", 0);
 
     while (1)
     {
