@@ -2,8 +2,6 @@
 
 int main(void)
 {
-    //CWL_Init();
-
     CWL_window* window = CWL_Create_Window(800, 600, "Test", 0);
 
     while (1)
