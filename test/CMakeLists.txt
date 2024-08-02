@@ -5,7 +5,7 @@ set(CMAKE_C_STANDARD 17)
 
 add_subdirectory(../ bin/)
 
-include_directories(../)
+include_directories(../include)
 
 add_executable(${PROJECT_NAME}
     main.c
